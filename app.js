@@ -1,5 +1,6 @@
 const http = require('http');
 const fs = require('fs');
+const path = require('path');
 
 const PORT = 3000;
 
@@ -8,14 +9,14 @@ const server = http.createServer((req, res) => {
 
   res.setHeader('Content-Type', 'text/html');
 
-  const createPath = (page) => `${__dirname}/views/${page}.html`;
-  let path = '';
+  const createPath = (page) => path.resolve(__dirname, 'views', `${page}.html`);
+  let basePath = '';
 
   switch(req.url) {
     case '/':
     case '/home':
     case '/index.html':
-      path = createPath('index');
+      basePath = createPath('index');
       res.statusCode = 200;
       break;
     case '/about-us':
@@ -24,16 +25,16 @@ const server = http.createServer((req, res) => {
       res.end();
       break;
     case '/contacts':
-      path = createPath('contacts');
+      basePath = createPath('contacts');
       res.statusCode = 200;
       break;
     default:
-      path = createPath('error');
+      basePath = createPath('error');
       res.statusCode = 404;
       break;
   }
 
-  fs.readFile(path, (err, data) => {
+  fs.readFile(basePath, (err, data) => {
     if (err) {
       console.log(err);
       res.statusCode = 500;
