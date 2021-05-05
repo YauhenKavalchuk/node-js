@@ -7,17 +7,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
     body {
-      display: flex;
+      padding-top: 80px;
       min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
       font-family: 'Montserrat', sans-serif;
       font-size: 20px;
       background: linear-gradient(to bottom, #00d2ff, #928dab);
       color: #fff;
     }
-    
+
     h1 {
       text-transform: uppercase;
     }
@@ -35,21 +32,43 @@
 
     nav ul {
       margin: 0;
-      padding: 0;
       display: flex;
     }
 
-    nav li {
-      list-style: none;
-    }
-
     nav a {
-      text-decoration: none;
-      color: #fff;
       min-height: 60px;
       display: block;
       padding: 10px 20px;
       line-height: 60px;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    article {
+      background-color: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 a {
+      color: aqua;
     }
   </style>
 </head>
@@ -62,7 +81,20 @@
       <li><a href="/contacts">Contacts</a></li>
     </ul>
   </nav>
-  <h1>Personal Blog</h1>
-  <p>Build with Node.js Express, EJS, MongoDB</p>
+  <h1>Posts:</h1>
+  <ul>
+    <li>
+      <article>
+        <h2>
+          <a href="/posts/1">Post title</a>
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quidem provident, dolores, vero laboriosam nemo mollitia impedit unde fugit sint eveniet, minima odio ipsum sed recusandae aut iste aspernatur dolorem.</p>
+        <div class="info">
+          <span>05.05.2021</span>
+          <span>Yauhen</span>
+        </div>
+      </article>
+    </li>
+  </ul>
 </body>
 </html>

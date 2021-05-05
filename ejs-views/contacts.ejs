@@ -2,22 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Node.js Course</title>
+  <title>Node.js Course | <%= title %></title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
     body {
-      display: flex;
+      padding-top: 80px;
       min-height: 100vh;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
       font-family: 'Montserrat', sans-serif;
       font-size: 20px;
       background: linear-gradient(to bottom, #00d2ff, #928dab);
       color: #fff;
     }
-    
+
     h1 {
       text-transform: uppercase;
     }
@@ -44,25 +41,29 @@
     }
 
     nav a {
-      text-decoration: none;
-      color: #fff;
       min-height: 60px;
       display: block;
       padding: 10px 20px;
       line-height: 60px;
     }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/posts">Posts</a></li>
-      <li><a href="/add-post">New Post</a></li>
-      <li><a href="/contacts">Contacts</a></li>
-    </ul>
-  </nav>
-  <h1>Personal Blog</h1>
-  <p>Build with Node.js Express, EJS, MongoDB</p>
+  <%- include('./partials/nav.ejs') %>
+  <h1>Contacts:</h1>
+  <ul>
+    <% if (contacts.length) { %>
+      <% contacts.forEach(({ link, name }) => { %>
+        <li>
+          <a href="<%= link %>"><%= name %></a>
+        </li>
+      <% }) %>
+    <% } %>
+  </ul>
 </body>
 </html>

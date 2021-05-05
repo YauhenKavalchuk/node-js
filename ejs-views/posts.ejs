@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Node.js Course</title>
+  <title>Node.js Course | <%= title %></title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
@@ -32,12 +32,7 @@
 
     nav ul {
       margin: 0;
-      padding: 0;
       display: flex;
-    }
-
-    nav li {
-      list-style: none;
     }
 
     nav a {
@@ -47,26 +42,52 @@
       line-height: 60px;
     }
 
+    li {
+      list-style: none;
+    }
+
+    ul {
+      padding: 0;
+    }
+
     a {
       text-decoration: none;
       color: #fff;
     }
+
+    article {
+      background-color: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h2 a {
+      color: aqua;
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/posts">Posts</a></li>
-      <li><a href="/add-post">New Post</a></li>
-      <li><a href="/contacts">Contacts</a></li>
-    </ul>
-  </nav>
-  <h1>Contacts:</h1>
+  <%- include('./partials/nav.ejs') %>
+  <h1>Posts:</h1>
   <ul>
-    <li><a href="http://youtube.com/YauhenKavalchuk">YouTube</a></li>
-    <li><a href="http://github.com/YauhenKavalchuk">Twitter</a></li>
-    <li><a href="http://twitter.com/YauhenKavalchuk">GitHub</a></li>
+    <li>
+      <article>
+        <h2>
+          <a href="/posts/1">Post title</a>
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quidem provident, dolores, vero laboriosam nemo mollitia impedit unde fugit sint eveniet, minima odio ipsum sed recusandae aut iste aspernatur dolorem.</p>
+        <div class="info">
+          <span>05.05.2021</span>
+          <span>Yauhen</span>
+        </div>
+      </article>
+    </li>
   </ul>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Node.js Course</title>
+  <title>Node.js Course | <%= title %></title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <style>
@@ -54,14 +54,7 @@
   </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/posts">Posts</a></li>
-      <li><a href="/add-post">New Post</a></li>
-      <li><a href="/contacts">Contacts</a></li>
-    </ul>
-  </nav>
+  <%- include('./partials/nav.ejs') %>
   <h1>Personal Blog</h1>
   <p>Build with Node.js Express, EJS, MongoDB</p>
 </body>
