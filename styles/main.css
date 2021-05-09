@@ -164,8 +164,10 @@ textarea {
   border: 1px solid #000;
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
-  min-width: 48px;
+  width: 48px;
   border-radius: 3px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .btn-edit,
