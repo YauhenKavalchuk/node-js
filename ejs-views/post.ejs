@@ -3,13 +3,19 @@
   <%- include('./partials/head.ejs') %>
 <body>
   <%- include('./partials/nav.ejs') %>
-  <article>
+  <article class="post">
     <div class="info">
       <span><%= post.createdAt.toLocaleDateString() || 'No date' %></span>
       <span><%= post.author %></span>
     </div>
     <h1><%= post.title %></h1>
     <p><%= post.text %></p>
+    <button class="btn-edit">
+      <i class="fas fa-edit"></i>
+    </button>
+    <button class="btn-delete">
+      <i class="fas fa-trash-alt"></i>
+    </button>
   </article>
 </body>
 </html>
