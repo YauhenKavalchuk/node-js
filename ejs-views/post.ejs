@@ -10,12 +10,25 @@
     </div>
     <h1><%= post.title %></h1>
     <p><%= post.text %></p>
-    <button class="btn-edit">
+    <a href="/edit/<%= post.id %>" class="btn-edit">
       <i class="fas fa-edit"></i>
-    </button>
-    <button class="btn-delete">
-      <i class="fas fa-trash-alt"></i>
+    </a>
+    <button class="btn-delete" data-id="<%= post.id %>">
+      <i class="fas fa-trash-alt" data-id="<%= post.id %>"></i>
     </button>
   </article>
+
+  <script>
+    document.addEventListener('click', (e) => {
+      const id = e.target?.dataset?.id || null;
+      if (id) {
+        fetch(`/posts/${id}`, {
+          method: 'DELETE',
+        }).then(() => {
+          window.location.href = '/posts';
+        });
+      }
+    });
+  </script>
 </body>
 </html>
