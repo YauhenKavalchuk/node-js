@@ -40,7 +40,7 @@ app.get('/posts/:id', (req, res) => {
     id: '1', 
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quidem provident, dolores, vero laboriosam nemo mollitia impedit unde fugit sint eveniet, minima odio ipsum sed recusandae aut iste aspernatur dolorem.',
     title: 'Post title',
-    data: '05.05.2021',
+    date: '05.05.2021',
     author: 'Yauhen',
   };
   const title = 'Post';
@@ -53,7 +53,7 @@ app.get('/posts', (req, res) => {
       id: '1', 
       text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quidem provident, dolores, vero laboriosam nemo mollitia impedit unde fugit sint eveniet, minima odio ipsum sed recusandae aut iste aspernatur dolorem.',
       title: 'Post title',
-      data: '05.05.2021',
+      date: '05.05.2021',
       author: 'Yauhen',
     },
   ];
@@ -71,7 +71,7 @@ app.post('/add-post', (req, res) => {
   const { title, author, text } = req.body;
   const post = {
     id: new Date(),
-    data: (new Date()).toLocaleDateString(),
+    date: (new Date()).toLocaleDateString(),
     title,
     author,
     text,
