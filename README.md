@@ -5,6 +5,7 @@
 ## Используемые инструменты:
 - [Visual Studio Code (редактор кода)](https://code.visualstudio.com)
 - [Postman (тестирование API)](https://www.postman.com)
+- [Heroku (бесплатный хотинг)](http://heroku.com)
 
 ## Полезные ссылки:
 - [Node.js (официальный сайт)](https://nodejs.org/en/)
@@ -19,6 +20,8 @@
 - [method-override](https://www.npmjs.com/package/method-override)
 - [mongoose](https://www.npmjs.com/package/mongoose)
 - [morgan](https://www.npmjs.com/package/morgan)
+- [chalk](https://www.npmjs.com/package/chalk)
+- [dotenv](https://www.npmjs.com/package/dotenv)
 
 ## Быстрый старт
 - Клонируйте репозиторий: `git clone https://github.com/YauhenKavalchuk/node-js.git`
