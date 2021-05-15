@@ -25,30 +25,34 @@
 
 ## Быстрый старт
 - Клонируйте репозиторий: `git clone https://github.com/YauhenKavalchuk/node-js.git`
-- Перейдите в папку с проектом `cd node-js`
-- Перейдите в нужную ветку соответствующую уроку: `git checkout lesson_01`, `git checkout lesson_02` и т.д.
+- Перейдите в папку с проектом: `cd node-js`
+- Перейдите в нужную ветку соответствующую уроку:
+  - `git checkout lesson_01`
+  - `git checkout lesson_02`
+  - `git checkout lesson_20`
 
 ## Список уроков
 - #0 Введение (Introduction)
 - #1 Базовые концепции и установка (Basic Concepts & Setup Environment)
 - #2 Глобальные объекты (Global Objects)
 - #3 Модули (импорт и экспорт) (Modules & Require)
-- #4 Node.js и файловая система (Node & File System)
+- #4 Node.js и файловая система (Node.js & File System)
 - #5 Модуль событий (Event Module)
 - #6 Буфер и потоки (Buffer & Streams)
 - #7 Клиент и сервер (Client & Server)
 - #8 Создание сервера (Create Server)
 - #9 Создание базового роутинга (Create Base Routing)
 - #10 Пакетный менеджер (NPM & packages)
-- #11 Node.js & Express
-- #12 Использование шаблонизатора (View Engines)
+- #11 Node.js & Express (Node.js & Express)
+- #12 Подключение шаблонизатора (View Engines)
 - #13 Промежуточное ПО (Middleware)
-- #14 Обработка POST запроса (Handling POST requests)
+- #14 Обработка POST запроса (Handling Post requests)
 - #15 Интеграция БД в приложение (MongoDB Integration)
 - #16 Добавление и получение данных (Get & Post Requests)
 - #17 Удаление и редактирование данных (Delete & Update Requests)
-- #18 Интеграция MVC паттерна (MVC Pattern & Router)
+- #18 MVC и Роутер (MVC Pattern & Router)
 - #19 Создание API (Create API)
+- #20 Загрузка приложения на Heroku (Deployment Node.js app on Heroku)
 
 ## Автор курса в социальных сетях:
 [<img align="left" alt="webDev | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
