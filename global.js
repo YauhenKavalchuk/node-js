@@ -1,12 +1,15 @@
 // console.log(global);
 
 // setTimeout(() => {
-// 	console.log("Hello!");
+//  console.log("Hello!");
 // }, 2000);
 
 // console.log(__dirname);
 // console.log(__filename);
 
+// console.log(process);
+// console.log(process.env);
+// console.log(process.argv);
 // console.log(`Hello, ${process.argv[2]}`);
 
 const url = new URL("https://webDev.com/path/name#test");
