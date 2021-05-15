@@ -1,11 +1,11 @@
 const fs = require("fs");
 
-fs.readFile("./test.txt", (error, data) => {
+fs.readFile("./test.txt", 'utf-8', (error, data) => {
 
-  fs.mkdir("./files", () => {});
+  fs.mkdirSync("./files", () => {});
 
-  fs.writeFile("./files/test2.txt", `${data.toString()}New text!`, (error) => {
-    console.log(error);
+  fs.writeFileSync("./files/test2.txt", `${data}New text!`, (error) => {
+    error ? console.log(error) : null;
   });
 
 });
