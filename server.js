@@ -14,9 +14,9 @@ app.listen(PORT, (error) => {
   error ? console.log(error) : console.log(`listening port ${PORT}`);
 });
 
-app.use(express.urlencoded({ extended: false }));
-
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
+
+app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static('styles'));
 
@@ -26,16 +26,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/contacts', (req, res) => {
+  const title = 'Contacts';
   const contacts = [
     { name: 'YouTube', link: 'http://youtube.com/YauhenKavalchuk' },
     { name: 'Twitter', link: 'http://github.com/YauhenKavalchuk' },
     { name: 'GitHub', link: 'http://twitter.com/YauhenKavalchuk' },
   ];
-  const title = 'Contacts';
   res.render(createPath('contacts'), { contacts, title });
 });
 
 app.get('/posts/:id', (req, res) => {
+  const title = 'Post';
   const post = {
     id: '1', 
     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quidem provident, dolores, vero laboriosam nemo mollitia impedit unde fugit sint eveniet, minima odio ipsum sed recusandae aut iste aspernatur dolorem.',
@@ -43,11 +44,11 @@ app.get('/posts/:id', (req, res) => {
     date: '05.05.2021',
     author: 'Yauhen',
   };
-  const title = 'Post';
-  res.render(createPath('post'), { post, title });
+  res.render(createPath('post'), { title, post });
 });
 
 app.get('/posts', (req, res) => {
+  const title = 'Posts';
   const posts = [
     {
       id: '1', 
@@ -55,19 +56,12 @@ app.get('/posts', (req, res) => {
       title: 'Post title',
       date: '05.05.2021',
       author: 'Yauhen',
-    },
+    }
   ];
-  const title = 'Posts';
-  res.render(createPath('posts'), { posts, title });
-});
-
-app.get('/add-post', (req, res) => {
-  const title = 'Add Post';
-  res.render(createPath('add-post'), { title });
+  res.render(createPath('posts'), { title, posts });
 });
 
 app.post('/add-post', (req, res) => {
-  //res.send(req.body);
   const { title, author, text } = req.body;
   const post = {
     id: new Date(),
@@ -75,8 +69,13 @@ app.post('/add-post', (req, res) => {
     title,
     author,
     text,
-  }
+  };
   res.render(createPath('post'), { post, title });
+});
+
+app.get('/add-post', (req, res) => {
+  const title = 'Add Post';
+  res.render(createPath('add-post'), { title });
 });
 
 app.use((req, res) => {

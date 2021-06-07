@@ -7,16 +7,18 @@
   <ul>
     <% if (posts.length) { %>
       <% posts.forEach(({ id, title, date, text, author }) => { %>
-        <article>
-          <h2>
-            <a href="/posts/<%= id %>"><%= title %></a>
-          </h2>
-          <p><%= text %></p>
-          <div class="info">
-            <span><%= date %></span>
-            <span><%= author %></span>
-          </div>
-        </article>
+        <li>
+          <article>
+            <h2>
+              <a href="/posts/<%= id %>"><%= title %></a>
+            </h2>
+            <p><%= text %></p>
+            <div class="info">
+              <span><%= date %></span>
+              <span><%= author %></span>
+            </div>
+          </article>
+        </li>
       <% }) %>
     <% } %>
   </ul>
