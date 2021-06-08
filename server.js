@@ -23,9 +23,9 @@ app.listen(PORT, (error) => {
   error ? console.log(error) : console.log(`listening port ${PORT}`);
 });
 
-app.use(express.urlencoded({ extended: false }));
-
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
+
+app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static('styles'));
 
@@ -38,7 +38,7 @@ app.get('/contacts', (req, res) => {
   const title = 'Contacts';
   Contact
     .find()
-    .then(contacts => res.render(createPath('contacts'), { contacts, title }))
+    .then((contacts) => res.render(createPath('contacts'), { contacts, title }))
     .catch((error) => {
       console.log(error);
       res.render(createPath('error'), { title: 'Error' });
@@ -49,7 +49,7 @@ app.get('/posts/:id', (req, res) => {
   const title = 'Post';
   Post
     .findById(req.params.id)
-    .then(post => res.render(createPath('post'), { post, title }))
+    .then((post) => res.render(createPath('post'), { post, title }))
     .catch((error) => {
       console.log(error);
       res.render(createPath('error'), { title: 'Error' });
@@ -61,16 +61,11 @@ app.get('/posts', (req, res) => {
   Post
     .find()
     .sort({ createdAt: -1 })
-    .then(posts => res.render(createPath('posts'), { posts, title }))
+    .then((posts) => res.render(createPath('posts'), { posts, title }))
     .catch((error) => {
       console.log(error);
       res.render(createPath('error'), { title: 'Error' });
     });
-});
-
-app.get('/add-post', (req, res) => {
-  const title = 'Add Post';
-  res.render(createPath('add-post'), { title });
 });
 
 app.post('/add-post', (req, res) => {
@@ -82,7 +77,12 @@ app.post('/add-post', (req, res) => {
     .catch((error) => {
       console.log(error);
       res.render(createPath('error'), { title: 'Error' });
-    });
+    })
+});
+
+app.get('/add-post', (req, res) => {
+  const title = 'Add Post';
+  res.render(createPath('add-post'), { title });
 });
 
 app.use((req, res) => {

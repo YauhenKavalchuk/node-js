@@ -7,16 +7,18 @@
   <ul>
     <% if (posts.length) { %>
       <% posts.forEach(({ id, title, createdAt, text, author }) => { %>
-        <article>
-          <h2>
-            <a href="/posts/<%= id %>"><%= title %></a>
-          </h2>
-          <p><%= text %></p>
-          <div class="info">
-            <span><%= createdAt.toLocaleDateString() %></span>
-            <span><%= author %></span>
-          </div>
-        </article>
+        <li>
+          <article>
+            <h2>
+              <a href="/posts/<%= id %>"><%= title %></a>
+            </h2>
+            <p><%= text %></p>
+            <div class="info">
+              <span><%= createdAt.toLocaleDateString() %></span>
+              <span><%= author %></span>
+            </div>
+          </article>
+        </li>
       <% }) %>
     <% } %>
   </ul>
