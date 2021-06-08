@@ -1,8 +1,8 @@
-require('dotenv').config();
 const express = require('express');
+const chalk = require('chalk');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const chalk = require('chalk');
+require('dotenv').config();
 const methodOverride = require('method-override');
 const postRoutes = require('./routes/post-routes');
 const postApiRoutes = require('./routes/api-post-routes');
@@ -22,9 +22,7 @@ mongoose
   .catch((error) => console.log(errorMsg(error)));
 
 app.listen(process.env.PORT, (error) => {
-  error 
-    ? console.log(errorMsg(error)) 
-    : console.log(successMsg(`listening port ${process.env.PORT}`));
+  error ? console.log(errorMsg(error)) : console.log(successMsg(`listening port ${process.env.PORT}`));
 });
 
 app.use(express.urlencoded({ extended: false }));
