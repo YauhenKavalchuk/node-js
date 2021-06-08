@@ -72,7 +72,7 @@ app.delete('/posts/:id', (req, res) => {
 });
 
 app.get('/edit/:id', (req, res) => {
-  const title = 'Edit post';
+  const title = 'Edit Post';
   Post
     .findById(req.params.id)
     .then(post => res.render(createPath('edit-post'), { post, title }))
@@ -86,7 +86,7 @@ app.put('/edit/:id', (req, res) => {
   const { title, author, text } = req.body;
   const { id } = req.params;
   Post
-    .findByIdAndUpdate(req.params.id, { title, author, text })
+    .findByIdAndUpdate(id, { title, author, text })
     .then((result) => res.redirect(`/posts/${id}`))
     .catch((error) => {
       console.log(error);
