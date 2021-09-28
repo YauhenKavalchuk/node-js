@@ -1,5 +1,20 @@
 # Node.js
 
+## Связаться со мной:
+[<img alt="webDev | YouTube" src="https://img.shields.io/badge/youtube-FF0000.svg?&style=for-the-badge&logo=Instagram&logoColor=white" />][youtube]
+[<img alt="webDev | Instagram" src="https://img.shields.io/badge/instagram-E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white" />][instagram]
+[<img alt="webDev | LinkedIn" src="https://img.shields.io/badge/linkedin-0077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />][linkedin]
+[<img alt="webDev | Twitter" src="https://img.shields.io/badge/twitter-1DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white" />][twitter]
+[<img alt="webDev | VK" src="https://img.shields.io/badge/vk-4680C2.svg?&style=for-the-badge&logo=Twitter&logoColor=white" />][vk]
+
+## Поддержать канал:
+<a href="https://www.youtube.com/channel/UCE9ODjNIkOHrnSdkYWLfYhg/join">
+  <img src="https://github.com/YauhenKavalchuk/YauhenKavalchuk/blob/master/assets/youtube_sponsor.png" width="160">
+</a>
+<a href="https://www.patreon.com/YauhenKavalchuk">
+  <img src="https://github.com/YauhenKavalchuk/YauhenKavalchuk/blob/master/assets/patreon_patron.png" width="160">
+</a>
+
 ### Описание курса:
 В данном видеокурсе мы с вами рассмотрим Node.js, серверную технологию которая позволяет исполнять код написанный на JavaScript вне браузера. Разберём базовые концепции и встроенные модули, которые активно используются при разработке сервера. Рассмотрим механизм коммуникаций между сервером и браузером. Создадим базовый роутинг на чистом Node.js. Подключем Express и перепишем роутер. Научимся работать с динамичными данными с помощью шаблонизатора Node.js. Напишем новостное приложение с поддержкой CRUD операций и хранением данных в MongoDB. Создадим свой API по возврату данных из БД. И в заключение, загрузим готовое приложение на Heroku. 
 
@@ -55,19 +70,6 @@
 - [#18 MVC и Роутер (MVC Pattern & Router)](https://youtu.be/Opx3wOmr07o)
 - [#19 Создание API (Create API)](https://youtu.be/PvYewHIAdKc)
 - [#20 Загрузка приложения на Heroku (Deployment On Heroku)](https://youtu.be/ke4Kl8kE2Lc)
-
-## Автор курса в социальных сетях:
-[<img align="left" alt="webDev | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="webDev | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
-[<img align="left" alt="webDev | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="webDev | VK" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/vk.svg" />][vk]
-[<img align="left" alt="webDev | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]&nbsp;
-
-## Поддержать канал:
-
-<a href="https://www.patreon.com/YauhenKavalchuk" target="_blank">
-  <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
 
 [youtube]: https://youtube.com/YauhenKavalchuk
 [instagram]: https://instagram.com/YauhenKavalchuk
